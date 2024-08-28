@@ -20,7 +20,7 @@ export class Track {
             ctx.lineTo(position.x, position.y)
         }
         ctx.closePath()
-        ctx.strokeStyle = this.colour
+        ctx.strokeStyle = `hsl(${this.colour}, 100%, 50%)`
         ctx.stroke()
     }
 }
