@@ -8,7 +8,11 @@ canvas.style.backgroundColor = '#000'
 document.getElementById('content-box').appendChild(canvas)
 
 const ctx = canvas.getContext('2d')
-const audioCtx = new (window.AudioContext || window.WebkitAudioContext)
+const audioCtx = new (window.AudioContext || 
+					window.WebkitAudioContext ||
+					window.mozAudioContext || 
+					window.oAudioContext || 
+					window.msAudioContext)
 const trackCenter = { x: size / 2, y: size / 2}
 
 const trackMinRadius = 100
